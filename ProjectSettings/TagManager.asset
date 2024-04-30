@@ -16,6 +16,7 @@ TagManager:
   - Slice6
   - Slice7
   - Slice8
+  - Ingredient
   layers:
   - Default
   - TransparentFX

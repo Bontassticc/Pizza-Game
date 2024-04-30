@@ -13,6 +13,7 @@ public DragEndDelegate dragEndedCallBack;
 private bool isDragged = false;
 private Vector3 mouseDragStartPosition;
 private Vector3 spriteDragStartPosition;
+public bool isSnapped;
 
     private void OnMouseDown()
     {
@@ -27,11 +28,9 @@ private Vector3 spriteDragStartPosition;
             transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPosition);
         }
     }
-
     private void OnMouseUp() 
     {
         isDragged = false;
         dragEndedCallBack(this);
-    
     }
 }
